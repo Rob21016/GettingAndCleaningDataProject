@@ -3,7 +3,6 @@
 #### Downloaded datasets
 
 activity_labels.txt
-
   * activity code
     1. WALKING
     2. WALKING_UPSTAIRS
