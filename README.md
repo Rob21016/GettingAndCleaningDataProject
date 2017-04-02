@@ -39,3 +39,24 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * 'ReadMe.md' file
 * 'Codebook.md' file. It details the variables found in the datasets used and the final dataset generated
 * 'run_analysis.R'. R script with the description of each step that lead to the generation of a tidy dataset with one variable per column, one observation per row, and column headers with names (explained the the codebook)
+
+### Explanation of the R script
+1. Setting the working directory
+2. Loading packages used in this script
+3. Downloading and unzipping the datasets necessary for the assessment
+    * checking the content of the download folders
+4. Reading the datasets used for the assessment and assign them to specific R objects
+5. Setting the column names in the data frames because the original datasets have no headers
+    * activity_lbl, test_partic, test_activity, train_partic and train_activity were assigned descriptive column names
+    * the column names for test_set and train_set were taken from the feature.txt dataset
+6. Merging datasets
+    * merging test_partic + test_activity + test_set to generate a test data frame with participant Ids, activity Ids and measured test values (test_merge)
+    * merging train_partic + train_activity + train_set to generate a test data frame with participant Ids, activity Ids and measured training values (test_train)
+    * merging test_merge + test_train to generate a combined data frame (train_test_df)
+7. Extracting the columns containing means and standard deviations
+    * some of the columns extracted contain the word 'mean', but they do not contain the data needed for the assessment, so they were removed
+8. Adding a column with the explanatory names of the activities (activityName)
+9. Replacing the dash sign with underscores and removing the parenthesis from column names. Parenthesis are not necessary there. Dashes in the names were generating errors in the next step. Column names were replaced with more explanatory names because that would have created unnecessarily long headers. This codebook and the original downloaded files explain those names in detail
+10. Removing the column where activity was represented by a number (activityId), and reordering the columns so that the column activityName is now the second column
+11. Generating the independent tidy data set with the average of each variable for each activity and each subject. In this data frame, grouping was done on activity and on participant within activity. Some of the variables have three measurements, one per axis (XYZ), and were kept separated as discreet sets of observations.
+12. Generating a txt file with the data frame
