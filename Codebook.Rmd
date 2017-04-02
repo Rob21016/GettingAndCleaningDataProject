@@ -122,4 +122,4 @@ summary_set.csv
 9. Replacing the dash sign with underscores and removing the parenthesis from column names. Parenthesis are not necessary there. Dashes in the names were generating errors in the next step. Column names were replaced with more explanatory names because that would have created unnecessarily long headers. This codebook and the original downloaded files explain those names in detail
 10. Removing the column where activity was represented by a number (activityId), and reordering the columns so that the column activityName is now the second column
 11. Generating the independent tidy data set with the average of each variable for each activity and each subject. In this data frame, grouping was done on activity and on participant within activity. Some of the variables have three measurements, one per axis (XYZ), and were kept separated as discreet sets of observations.
-12. Generating a csv file with the data frame
+12. Generating a txt file with the data frame
