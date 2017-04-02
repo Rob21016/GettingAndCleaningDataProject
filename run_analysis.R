@@ -73,4 +73,4 @@ train_test_meanSD <- select(train_test_meanSD, participantId, activityName, tBod
 summary_set <- train_test_meanSD %>% group_by(activityName, participantId) %>% summarise_each(funs(mean))
 
 # writing the second dataset
-write.table(summary_set, 'summary_set.csv')
+write.table(summary_set, 'summary_set.txt', row.name=FALSE)
