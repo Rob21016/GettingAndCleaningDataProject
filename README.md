@@ -37,6 +37,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ### This repository includes the following files
 
 * 'ReadMe.md' file
-* 'Codebook.md' file. It details the variables found in the datasets used, and describes the sequence of transformations done to generate the 'summary_set.csv' dataset
+* 'Codebook.md' file. It details the variables found in the datasets used and the final dataset generated
 * 'run_analysis.R'. R script with the description of each step that lead to the generation of a tidy dataset with one variable per column, one observation per row, and column headers with names (explained the the codebook)
-* 'summary_set.txt'. Dataset requested in point 5 above.
