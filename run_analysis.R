@@ -64,7 +64,7 @@ train_test_meanSD <- inner_join(train_test_meanSD, activity_lbl, by='activityId'
 # this is necessary for the next transformation because the select command generated errors with
 # dashes and parentheses in the names. Moreover, parenthesis are not needed in variable names.
 names(train_test_meanSD) <- gsub('-', '_', names(train_test_meanSD))
-names(train_test_meanSD) <- gsub('[()]', '', names(train_test_meanSD)) 
+names(train_test_meanSD) <- sub('[()]', '', names(train_test_meanSD)) 
 names(train_test_meanSD) <- sub("^t", "time", names(train_test_meanSD))
 names(train_test_meanSD) <- sub("^f", "frequency", names(train_test_meanSD))
 names(train_test_meanSD) <- sub("Acc", "Accelerometer", names(train_test_meanSD))
