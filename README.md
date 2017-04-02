@@ -39,4 +39,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * 'ReadMe.md' file
 * 'Codebook.md' file. It details the variables found in the datasets used, and describes the sequence of transformations done to generate the 'summary_set.csv' dataset
 * 'run_analysis.R'. R script with the description of each step that lead to the generation of a tidy dataset with one variable per column, one observation per row, and column headers with names (explained the the codebook)
-* 'summary_set.csv'. Dataset requested in point 5 above.
+* 'summary_set.txt'. Dataset requested in point 5 above.
