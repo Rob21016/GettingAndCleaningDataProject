@@ -12,9 +12,7 @@ activity_labels.txt
     6. LAYING
     
 features.txt
-
   * list of the 561 variables which are the combination of the following 2 sets of variables:
-  
     * Set 1: signals acquired by the smartphone. 't' means time, 'f' means frequency. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
         * tBodyAcc-XYZ
         * tGravityAcc-XYZ
@@ -53,33 +51,26 @@ features.txt
         * angle(): Angle between to vectors.
 
 subject_test.txt
-
   * test participants. Each row represent a participant identified by a number from 1 to 30.
   
 X_test.txt
-
   * dataset containing the test measured values
   
 y_test.txt
-
   * test activities. Each row represent an activity and is identified by a number (see activity_labels.txt)
   
 subject_train.txt
-
   * training participants. Each row represent a participant identified by a number from 1 to 30.
   
 X_train.txt
-
   * dataset containing the training measured values
   
 y_train.txt
-
   * training activities. Each row represent an activity and is identified by a number (see activity_labels.txt)
   
 #### Dataset generated for the assessment
 
 summary_set.csv
-
   * activityName
     * WALKING
     * WALKING_UPSTAIRS
