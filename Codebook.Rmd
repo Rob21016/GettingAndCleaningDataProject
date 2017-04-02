@@ -113,8 +113,8 @@ summary_set.csv
     * activity_lbl, test_partic, test_activity, train_partic and train_activity were assigned descriptive column names
     * the column names for test_set and train_set were taken from the feature.txt dataset
 6. Merging datasets
-    * merging test_partic + test_activity + test_set to generate a test data frame with the participant Ids, the activity Ids and the measured test values (test_merge)
-    * merging train_partic + train_activity + train_set to generate a test data frame with the participant Ids, the activity Ids and the measured training values (test_train)
+    * merging test_partic + test_activity + test_set to generate a test data frame with participant Ids, activity Ids and measured test values (test_merge)
+    * merging train_partic + train_activity + train_set to generate a test data frame with participant Ids, activity Ids and measured training values (test_train)
     * merging test_merge + test_train to generate a combined data frame (train_test_df)
 7. Extracting the columns containing means and standard deviations
     * some of the columns extracted contain the word 'mean', but they do not contain the data needed for the assessment, so they were removed
