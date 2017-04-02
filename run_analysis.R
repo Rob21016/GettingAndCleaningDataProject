@@ -65,9 +65,15 @@ train_test_meanSD <- inner_join(train_test_meanSD, activity_lbl, by='activityId'
 # dashes and parentheses in the names. Moreover, parenthesis are not needed in variable names.
 names(train_test_meanSD) <- gsub('-', '_', names(train_test_meanSD))
 names(train_test_meanSD) <- gsub('[()]', '', names(train_test_meanSD)) 
+names(train_test_meanSD)<-gsub("^t", "time",names(train_test_meanSD))
+names(train_test_meanSD)<-gsub("^f", "frequency", names(train_test_meanSD))
+names(train_test_meanSD)<-gsub("Acc", "Accelerometer", names(train_test_meanSD))
+names(train_test_meanSD)<-gsub("Gyro", "Gyroscope", names(train_test_meanSD))
+names(train_test_meanSD)<-gsub("Mag", "Magnitude", names(train_test_meanSD))
 
 # removing the activityId column and reordering the columns to have the activityName column in second position
-train_test_meanSD <- select(train_test_meanSD, participantId, activityName, tBodyAcc_mean_X:fBodyBodyGyroJerkMag_std)
+train_test_meanSD <- select(train_test_meanSD, participantId, activityName, 
+                            timeBodyAccelerometer_mean_X:frequencyBodyBodyGyroscopeJerkMagnitude_std)
 
 # second tidy set (Q5) with the average of each variable for each activity and each participant
 summary_set <- train_test_meanSD %>% group_by(activityName, participantId) %>% summarise_each(funs(mean))
