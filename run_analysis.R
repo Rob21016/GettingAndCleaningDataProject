@@ -1,7 +1,7 @@
 # R v. 3.3.3  RStudio v. 1.0.136  MacOS 10.12.4
 
 # set the working directory
-setwd("~/Documents/Coursera_courses/R/R_progr_JHopkins/working_dir_coursera_R/Mod3/Final_project")
+setwd("~/Documents/Coursera_courses/R/Mod3/Final_project")
 getwd()
 
 # packages used
